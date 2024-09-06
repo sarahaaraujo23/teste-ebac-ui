@@ -39,7 +39,7 @@ describe('Funcionalidade: Login', () => {
         cy.get('.woocommerce-form > .button').click()
         cy.get('.woocommerce-MyAccount-content > :nth-child(2)').should('contain', 'Olá, sarahjanne2008')
     });
-    it.only('Deve fazer login com sucesso - Usando fixture', () => {
+    it('Deve fazer login com sucesso - Usando fixture', () => {
        cy.fixture('perfil').then(dados =>{
         cy.get('#username').type(dados.usuario, {log:false}) //o comando faz com que não sejam apresentados os dados em tela durante teste no test body
         cy.get('#password').type(dados.senha, {log: false})
