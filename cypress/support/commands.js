@@ -39,7 +39,7 @@ Cypress.Commands.add('preCadastro', (email, senha, nome, sobrenome) => {
 })
 Cypress.Commands.add('detalhesConta', (nome, sobrenome,usuario) => {
     cy.get('#account_first_name')
-    .clear()
+    .clear() //comando para limpar o campo antes de inserir novos dados
     .type(nome)  
     cy.get('#account_last_name')
     .clear()
